@@ -26,155 +26,170 @@
         .fade-in { animation: fadeIn 1s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* Animasi Menu Mobile */
-        #mobile-menu { transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
-        .menu-hidden { max-height: 0; opacity: 0; overflow: hidden; }
-        .menu-visible { max-height: 300px; opacity: 1; }
+        /* CSS untuk transisi menu mobile */
+        #mobile-menu { transition: all 0.3s ease-in-out; }
+        .hidden-menu { max-height: 0; opacity: 0; overflow: hidden; }
+        .visible-menu { max-height: 300px; opacity: 1; }
     </style>
 </head>
 
 <body class="bg-[#F8F9FA] text-brand antialiased">
 
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-200">
-        <div class="max-w-5xl mx-auto px-4 md:px-6">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-lg font-bold tracking-tight text-brand truncate z-50">M. RIZQI BAGUS T.</a>
-                
-                <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
-                    <a href="#work" class="hover:text-brand transition">Work</a>
-                    <a href="#profile" class="hover:text-brand transition">About</a>
-                    <a href="#contact" class="hover:text-brand transition">Contact</a>
-                </div>
-
-                <div class="md:hidden flex items-center z-50">
-                    <button id="mobile-menu-btn" class="text-brand focus:outline-none p-2">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 h-16 flex justify-between items-center">
+            
+            <a href="#" class="text-lg font-bold tracking-tight text-brand truncate z-50">M. RIZQI BAGUS T.</a>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+                <a href="#work" class="hover:text-brand transition">Work</a>
+                <a href="#profile" class="hover:text-brand transition">About</a>
+                <a href="#contact" class="hover:text-brand transition">Contact</a>
             </div>
+
+            <button id="mobile-btn" class="md:hidden text-brand focus:outline-none z-50 p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
 
-        <div id="mobile-menu" class="menu-hidden bg-white border-b border-gray-100 md:hidden absolute w-full top-16 left-0 shadow-lg">
+        <div id="mobile-menu" class="hidden-menu md:hidden bg-white border-b border-gray-100 absolute w-full top-16 left-0 shadow-lg">
             <div class="flex flex-col px-6 py-4 space-y-4 text-center">
-                <a href="#work" class="text-gray-600 font-medium py-2 hover:bg-gray-50 rounded-lg transition" onclick="toggleMenu()">Work</a>
-                <a href="#profile" class="text-gray-600 font-medium py-2 hover:bg-gray-50 rounded-lg transition" onclick="toggleMenu()">About</a>
-                <a href="#contact" class="text-gray-600 font-medium py-2 hover:bg-gray-50 rounded-lg transition" onclick="toggleMenu()">Contact</a>
+                <a href="#work" class="text-gray-600 font-medium py-2 hover:bg-gray-50 rounded transition" onclick="toggleMenu()">Work</a>
+                <a href="#profile" class="text-gray-600 font-medium py-2 hover:bg-gray-50 rounded transition" onclick="toggleMenu()">About</a>
+                <a href="#contact" class="text-gray-600 font-medium py-2 hover:bg-gray-50 rounded transition" onclick="toggleMenu()">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
+    <section class="relative min-h-screen flex flex-col justify-center overflow-hidden">
 
         <div class="absolute inset-0 z-0">
             <img src="hr.jpg" alt="Background Mount Ungaran" class="w-full h-full object-cover blur-[2px]">
         </div>
 
-        <div class="absolute inset-0 bg-white/75 z-10"></div>
+        <div class="absolute inset-0 bg-white/70 z-10"></div>
 
         <div class="relative z-20 max-w-5xl mx-auto px-4 md:px-6 pt-20 fade-in w-full">
-            <p class="text-gray-500 text-xs md:text-sm mb-3 md:mb-4 tracking-wide uppercase font-medium">Based in Rembang, Central Java</p>
+            <p class="text-gray-500 text-sm mb-4 tracking-wide uppercase font-medium">Based in Rembang, Central Java</p>
 
-            <h1 class="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight tracking-tight mb-4 md:mb-6 text-brand drop-shadow-sm">
+            <h1 class="text-3xl md:text-6xl font-semibold leading-tight tracking-tight mb-6 text-brand drop-shadow-sm">
                 Muhamad Rizqi Bagus T. <br class="hidden md:block">
-                <span class="block md:inline mt-1 md:mt-0">Informatics Student.</span>
+                <span class="block md:inline mt-2 md:mt-0">Informatics Student.</span>
             </h1>
 
-            <p class="text-base sm:text-lg md:text-xl text-gray-700 max-w-xl md:max-w-2xl font-light mb-8 md:mb-10 leading-relaxed">
-                A resilient Full Stack Developer who loves challenges. I may not know everything yet, but I have the grit to learn anything required to solve the problem.
+            <p class="text-lg md:text-xl text-gray-700 max-w-2xl font-light mb-10">
+                A resilient Full Stack Developer who loves challenges. I may not know everything yet, but I have the
+                grit to learn anything required to solve the problem. Specialized in <strong>Python/Django</strong> and
+                <strong>PHP Native</strong>.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
-                <a href="#work" class="px-6 py-3.5 bg-brand text-white text-sm font-bold rounded-lg hover:bg-brandDark transition shadow-lg text-center w-full sm:w-auto">
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#work"
+                    class="px-6 py-3 bg-brand text-white text-sm font-bold rounded hover:bg-brandDark transition shadow-lg shadow-brand/20 text-center w-full sm:w-auto">
                     View My Projects
                 </a>
-                <a href="#contact" class="px-6 py-3.5 border border-brand text-brand text-sm font-medium rounded-lg hover:bg-brand/5 transition text-center w-full sm:w-auto">
+                <a href="#contact"
+                    class="px-6 py-3 border border-brand text-brand text-sm font-medium rounded hover:bg-brand/5 transition text-center w-full sm:w-auto">
                     Contact Me
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="work" class="py-16 md:py-20 bg-white border-t border-gray-100 scroll-mt-16">
+    <section id="work" class="py-16 md:py-20 bg-white border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-4 md:px-6">
             <h2 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8 md:mb-12">01 — Selected Projects</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-8 md:gap-y-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16">
                 <div class="group cursor-pointer">
-                    <div class="bg-gray-50 p-2 border border-gray-200 rounded-lg shadow-sm overflow-hidden mb-4 md:mb-6">
-                        <img src="p4.png" alt="Stunting AI" class="w-full h-48 sm:h-56 md:h-64 object-cover transform group-hover:scale-[1.02] transition duration-500">
+                    <div class="bg-gray-50 p-2 border border-gray-200 rounded-lg shadow-sm overflow-hidden mb-6">
+                        <img src="p4.png" alt="Stunting AI"
+                            class="w-full h-48 md:h-64 object-cover transform group-hover:scale-[1.02] transition duration-500">
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-brand group-hover:underline">Stunting Prediction Model</h3>
-                    <p class="text-gray-500 text-xs font-mono mb-2 md:mb-3">Python / Django / Machine Learning</p>
+                    <h3 class="text-xl font-semibold mb-2 text-brand group-hover:underline">Stunting Prediction Model</h3>
+                    <p class="text-gray-500 text-xs font-mono mb-3">Python / Django / Machine Learning</p>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Built a classification system achieving <strong>86.1% Accuracy</strong>. Shows my ability to handle complex logic and Python data libraries.
+                        Built a classification system achieving <strong>86.1% Accuracy</strong>. Shows my ability to
+                        handle complex logic and Python data libraries.
                     </p>
                 </div>
 
                 <div class="group cursor-pointer">
-                    <div class="bg-gray-50 p-2 border border-gray-200 rounded-lg shadow-sm overflow-hidden mb-4 md:mb-6">
-                        <img src="p1.png" alt="TetraVolt ERP" class="w-full h-48 sm:h-56 md:h-64 object-cover object-top transform group-hover:scale-[1.02] transition duration-500">
+                    <div class="bg-gray-50 p-2 border border-gray-200 rounded-lg shadow-sm overflow-hidden mb-6">
+                        <img src="p1.png" alt="TetraVolt ERP"
+                            class="w-full h-48 md:h-64 object-cover object-top transform group-hover:scale-[1.02] transition duration-500">
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-brand group-hover:underline">TetraVolt Inventory</h3>
-                    <p class="text-gray-500 text-xs font-mono mb-2 md:mb-3">PHP / MySQL / Tailwind</p>
+                    <h3 class="text-xl font-semibold mb-2 text-brand group-hover:underline">TetraVolt Inventory</h3>
+                    <p class="text-gray-500 text-xs font-mono mb-3">PHP / MySQL / Tailwind</p>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        A complete inventory management system. Demonstrates strong backend logic with PHP Native and efficient database structuring.
+                        A complete inventory management system. Demonstrates strong backend logic with PHP Native and
+                        efficient database structuring.
                     </p>
                 </div>
 
                 <div class="group cursor-pointer">
-                    <div class="bg-gray-50 p-2 border border-gray-200 rounded-lg shadow-sm overflow-hidden mb-4 md:mb-6">
-                        <img src="p2.png" alt="PANGESTU EdTech" class="w-full h-48 sm:h-56 md:h-64 object-cover object-left transform group-hover:scale-[1.02] transition duration-500">
+                    <div class="bg-gray-50 p-2 border border-gray-200 rounded-lg shadow-sm overflow-hidden mb-6">
+                        <img src="p2.png" alt="PANGESTU EdTech"
+                            class="w-full h-48 md:h-64 object-cover object-left transform group-hover:scale-[1.02] transition duration-500">
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-brand group-hover:underline">PANGESTU Academic Tool</h3>
-                    <p class="text-gray-500 text-xs font-mono mb-2 md:mb-3">Web App / PHP</p>
+                    <h3 class="text-xl font-semibold mb-2 text-brand group-hover:underline">PANGESTU Academic Tool</h3>
+                    <p class="text-gray-500 text-xs font-mono mb-3">Web App / Data Analysis / PHP</p>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Student evaluation platform for SD Negeri 1 Pedawang. Focused on user-friendly interfaces for teachers.
+                        Student evaluation platform for SD Negeri 1 Pedawang. Focused on user-friendly interfaces for
+                        teachers and accurate data reporting.
                     </p>
                 </div>
 
                 <div class="group cursor-pointer">
-                    <div class="bg-brandDark p-2 border border-gray-700 rounded-lg shadow-sm overflow-hidden mb-4 md:mb-6 flex justify-center items-center h-52 sm:h-56 md:h-[270px]">
-                        <img src="p3.png" alt="SI PENTING Chatbot" class="h-full w-auto object-contain transform group-hover:scale-[1.02] transition duration-500">
+                    <div class="bg-brandDark p-2 border border-gray-700 rounded-lg shadow-sm overflow-hidden mb-6 flex justify-center items-center h-52 md:h-[270px]">
+                        <img src="p3.png" alt="SI PENTING Chatbot"
+                            class="h-full w-auto object-contain transform group-hover:scale-[1.02] transition duration-500">
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-brand group-hover:underline">Public Health Chatbot</h3>
-                    <p class="text-gray-500 text-xs font-mono mb-2 md:mb-3">AI Integration / Mobile Web</p>
+                    <h3 class="text-xl font-semibold mb-2 text-brand group-hover:underline">Public Health Chatbot</h3>
+                    <p class="text-gray-500 text-xs font-mono mb-3">AI Integration / Mobile Web / PHP</p>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Interactive tool providing instant health information to rural communities.
+                        Created during KKN Community Service. An interactive tool providing instant health information
+                        to rural communities.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="profile" class="py-16 md:py-20 bg-[#F8F9FA] border-t border-gray-200 scroll-mt-16">
+    <section id="profile" class="py-16 md:py-20 bg-[#F8F9FA] border-t border-gray-200">
         <div class="max-w-5xl mx-auto px-4 md:px-6">
             <h2 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8 md:mb-12">02 — About Me</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+
                 <div>
-                    <div class="mb-8">
-                        <img src="my.jpg" alt="Muhamad Rizqi Bagus Trianto hiking" class="w-full md:w-[90%] h-64 sm:h-80 md:h-[400px] object-cover rounded-2xl shadow-xl shadow-brand/10">
+                    <div class="mb-8 md:mb-10">
+                        <img src="my.jpg" alt="Muhamad Rizqi Bagus Trianto hiking"
+                            class="w-full md:w-[85%] h-64 md:h-[400px] object-cover rounded-2xl shadow-xl shadow-brand/10">
                         <p class="text-xs text-gray-500 mt-3 italic flex items-center gap-2">
-                            <i class="fas fa-mountain text-brand"></i> Conquering Mt. Ungaran, 2050 MDPL.
+                            <i class="fas fa-mountain text-brand"></i> Conquering challenges at Mt. Ungaran, 2050 MDPL.
                         </p>
                     </div>
 
                     <h3 class="text-lg font-medium mb-4 text-brand">Who Am I?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                        I am a 7th-semester student at <strong>Universitas Muria Kudus</strong>. Originally from Rembang, I previously focused on Science (MIPA).
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        I am a 7th-semester student at <strong>Universitas Muria Kudus</strong>, majoring in Informatics
+                        Engineering. Originally from Rembang, I previously focused on Science (MIPA) at SMA Negeri 1
+                        Kragan.
                     </p>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                        My biggest strength is my adaptability. I embrace new challenges—whether it's hiking a mountain or learning a new framework to solve a bug.
+                        My biggest strength is my adaptability. I embrace new challenges—whether it's hiking a mountain
+                        or learning a new framework to solve a bug. I am committed to continuous learning to deliver the
+                        best results.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 md:p-0 rounded-xl md:bg-transparent border md:border-0 border-gray-100">
+                <div>
                     <div class="mb-8">
                         <h3 class="text-lg font-medium mb-4 text-brand">Certifications</h3>
                         <ul class="text-sm text-gray-600 space-y-3 border-l-2 border-brand/20 pl-4">
                             <li>
                                 <strong>Microsoft Office Specialist (Grade A)</strong><br>
-                                <span class="text-gray-400 text-xs">Certified by UPT Komputer UMK.</span>
+                                <span class="text-gray-400 text-xs">Certified by UPT Komputer UMK. (High attention to detail).</span>
                             </li>
                             <li>
                                 <strong>English Proficiency</strong><br>
@@ -206,12 +221,16 @@
                     <h3 class="text-lg font-medium mb-4 text-brand">Languages</h3>
                     <ul class="text-sm text-gray-600 space-y-3">
                         <li class="flex justify-between border-b border-gray-200 pb-2">
-                            <span>Indonesian / Javanese</span>
+                            <span>Indonesian</span>
+                            <span class="font-medium text-brand">Native</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-200 pb-2">
+                            <span>Javanese</span>
                             <span class="font-medium text-brand">Native</span>
                         </li>
                         <li class="flex justify-between border-b border-gray-200 pb-2">
                             <span>English</span>
-                            <span class="font-medium text-brand">Technical</span>
+                            <span class="font-medium text-brand">Technical (Reading/Writing)</span>
                         </li>
                     </ul>
                 </div>
@@ -219,68 +238,64 @@
         </div>
     </section>
 
-    <footer id="contact" class="bg-brand text-white py-12 md:py-20 scroll-mt-16">
+    <footer id="contact" class="bg-brand text-white py-16 md:py-20">
         <div class="max-w-5xl mx-auto px-4 md:px-6">
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 md:mb-6">Let's connect.</h2>
+            <h2 class="text-3xl font-semibold mb-6">Let's connect.</h2>
             <p class="text-blue-100 text-sm max-w-md mb-8">
-                Open to freelance work, internships, or full-time opportunities.
+                I am open to freelance work, internships, or full-time opportunities. Feel free to reach out via
+                WhatsApp or Email.
             </p>
 
-            <div class="flex flex-col gap-6 md:gap-8 mb-12">
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
                 <div>
                     <span class="text-xs text-blue-300 uppercase tracking-widest block mb-1">Email</span>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bagusrizqi367@gmail.com" target="_blank" class="text-lg md:text-xl font-medium hover:text-blue-200 transition break-all">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bagusrizqi367@gmail.com" target="_blank"
+                        class="text-lg font-medium hover:text-blue-200 transition break-all">
                         bagusrizqi367@gmail.com
                     </a>
                 </div>
                 <div>
                     <span class="text-xs text-blue-300 uppercase tracking-widest block mb-1">WhatsApp</span>
-                    <a href="https://wa.me/6283842367770" class="text-lg md:text-xl font-medium hover:text-blue-200 transition">
-                        +62 838-4236-7770
-                    </a>
+                    <a href="https://wa.me/6283842367770" class="text-lg font-medium hover:text-blue-200 transition">+62
+                        838-4236-7770</a>
                 </div>
             </div>
 
-            <div class="flex gap-4 md:gap-6 mb-12 border-t border-blue-800/50 pt-8">
-                <a href="https://github.com/mhmmdrzqbgs" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full hover:bg-white/20 transition text-sm">
-                    <i class="fab fa-github"></i> <span>GitHub</span>
+            <div class="flex gap-6 mb-16">
+                <a href="https://github.com/mhmmdrzqbgs" target="_blank"
+                    class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded hover:bg-white/20 transition">
+                    <i class="fab fa-github"></i> <span>@mhmmdrzqbgs</span>
                 </a>
-                <a href="https://instagram.com/mhmmd.rzqbgs" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full hover:bg-white/20 transition text-sm">
-                    <i class="fab fa-instagram"></i> <span>Instagram</span>
+                <a href="https://instagram.com/mhmmd.rzqbgs" target="_blank"
+                    class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded hover:bg-white/20 transition">
+                    <i class="fab fa-instagram"></i> <span>@mhmmd.rzqbgs</span>
                 </a>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between text-xs text-blue-300 gap-4">
-                <p>&copy; 2025 Muhamad Rizqi Bagus Trianto.</p>
-                <div class="flex gap-4">
+            <div class="border-t border-blue-900/50 pt-8 flex flex-col md:flex-row justify-between text-xs text-blue-200 gap-4">
+                <div class="flex gap-6">
                     <a href="#" class="hover:text-white">Impressum</a>
-                    <a href="#" class="hover:text-white">Privacy</a>
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
                 </div>
+                <p>&copy; 2025 Muhamad Rizqi Bagus Trianto.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            if (menu.classList.contains('menu-hidden')) {
-                menu.classList.remove('menu-hidden');
-                menu.classList.add('menu-visible');
-            } else {
-                menu.classList.remove('menu-visible');
-                menu.classList.add('menu-hidden');
-            }
-        });
-
-        // Tutup menu otomatis saat link diklik
         function toggleMenu() {
-            if (window.innerWidth < 768) { // Hanya di mode mobile
-                menu.classList.remove('menu-visible');
-                menu.classList.add('menu-hidden');
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden-menu')) {
+                menu.classList.remove('hidden-menu');
+                menu.classList.add('visible-menu');
+            } else {
+                menu.classList.remove('visible-menu');
+                menu.classList.add('hidden-menu');
             }
         }
+
+        document.getElementById('mobile-btn').addEventListener('click', toggleMenu);
     </script>
+
 </body>
 </html>
