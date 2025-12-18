@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Muhammad Rizqi Bagus Trianto</title>
+    <meta name="description" content="About Muhamad Rizqi Bagus T. - Informatics Student from Rembang.">
+    <meta name="author" content="Muhamad Rizqi Bagus Trianto">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#234C6A',
+                        brandDark: '#1a3a52',
+                        accent: '#9CC3D5',
+                        accentLight: '#BFE0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-brand antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-brand">M. RIZQI BAGUS T.</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="work.html" class="hover:text-brand transition">Work</a>
+                <a href="about.html" class="text-brand font-bold border-b-2 border-accent pb-1">About</a>
+                <a href="contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="mobile-btn" class="md:hidden text-brand focus:outline-none z-50 p-2"><i
+                    class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full top-20 left-0 shadow-lg px-6 py-4 hidden">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="work.html" class="block py-2">Work</a>
+            <a href="about.html" class="block py-2 text-brand font-bold">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-brand text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-in-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
+            <p class="text-blue-100 text-lg max-w-2xl mx-auto">Problem solver, mountain hiker, and enthusiastic
+                developer.</p>
+        </div>
+    </header>
+
+    <section class="py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-4 md:px-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+                <div class="md:col-span-5 fade-in-up delay-100">
+                    <img src="my.jpg" alt="Profile"
+                        class="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500 w-full object-cover h-[400px]">
+                    <p
+                        class="text-xs text-gray-500 mt-3 italic flex items-center gap-2 justify-center md:justify-start">
+                        <i class="fas fa-mountain text-brand"></i> Conquering challenges at Mt. Ungaran, 2050 MDPL.
+                    </p>
+                </div>
+                <div class="md:col-span-7 flex flex-col justify-center fade-in-up delay-200">
+                    <h2 class="text-2xl font-bold mb-4 text-brand">Who Am I?</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        I am a 7th-semester student at <strong>Universitas Muria Kudus</strong>, majoring in Informatics
+                        Engineering. Originally from Rembang, I previously focused on Science (MIPA) at SMA Negeri 1
+                        Kragan.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        My biggest strength is my adaptability. I embrace new challenges—whether it's hiking a mountain
+                        or learning a new framework to solve a bug. I am committed to continuous learning to deliver the
+                        best results.
+                    </p>
+
+                    <div class="mb-6 bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+                        <h3 class="text-lg font-bold mb-3 text-brand">Certifications</h3>
+                        <ul class="text-sm text-gray-600 space-y-3">
+                            <li>
+                                <strong>Microsoft Office Specialist (Grade A)</strong><br>
+                                <span class="text-gray-400 text-xs">Certified by UPT Komputer UMK. (High attention to
+                                    detail).</span>
+                            </li>
+                            <li>
+                                <strong>English Proficiency</strong><br>
+                                <span class="text-gray-400 text-xs">Certified by UPT Bahasa UMK.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-in-up delay-300">
+                <h3 class="text-xl font-bold mb-8 text-center text-brand">Technical Arsenal</h3>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center">
+                    <div
+                        class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+                        <i class="fab fa-python text-4xl text-gray-400 group-hover:text-[#3776AB] mb-3 transition"></i>
+                        <h4 class="font-bold text-sm">Python (Django)</h4>
+                    </div>
+
+                    <div
+                        class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+                        <i class="fab fa-php text-4xl text-gray-400 group-hover:text-[#777BB4] mb-3 transition"></i>
+                        <h4 class="font-bold text-sm">PHP Native</h4>
+                    </div>
+
+                    <div
+                        class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+                        <i class="fab fa-java text-4xl text-gray-400 group-hover:text-red-600 mb-3 transition"></i>
+                        <h4 class="font-bold text-sm">Java</h4>
+                    </div>
+
+                    <div
+                        class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+                        <i class="fab fa-js text-4xl text-gray-400 group-hover:text-yellow-400 mb-3 transition"></i>
+                        <h4 class="font-bold text-sm">JavaScript</h4>
+                    </div>
+
+                    <div
+                        class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+                        <i class="fab fa-figma text-4xl text-gray-400 group-hover:text-pink-500 mb-3 transition"></i>
+                        <h4 class="font-bold text-sm">Figma</h4>
+                    </div>
+
+                    <div
+                        class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+                        <svg class="w-10 h-10 mx-auto mb-3 text-gray-400 group-hover:text-[#38bdf8] transition fill-current"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
+                        </svg>
+                        <h4 class="font-bold text-sm">Tailwind CSS</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center fade-in-up delay-300">
+                <h3 class="text-xl font-bold mb-4 text-brand">Languages</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                    <span class="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">Indonesian
+                        (Native)</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">Javanese
+                        (Native)</span>
+                    <span class="px-4 py-2 bg-white rounded-full border border-gray-200 shadow-sm">English
+                        (Technical)</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-brand text-white py-8 border-t border-white/10 text-center text-sm">
+        <p>&copy; 2025 Muhammad Rizqi Bagus T.</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Muhammad Rizqi Bagus Trianto</title>
+    <meta name="description"
+        content="Contact Muhammad Rizqi Bagus T. Open for freelance, internships, or full-time opportunities.">
+    <meta name="author" content="Muhammad Rizqi Bagus Trianto">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#234C6A',
+                        brandDark: '#1a3a52',
+                        accent: '#9CC3D5',      /* Steel Blue */
+                        accentLight: '#BFE0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-up {
+            animation: fadeUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-brand antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-brand">M. RIZQI BAGUS T.</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="work.html" class="hover:text-brand transition">Work</a>
+                <a href="about.html" class="hover:text-brand transition">About</a>
+                <a href="contact.html" class="text-brand font-bold border-b-2 border-accent pb-1">Contact</a>
+            </div>
+            <button id="mobile-btn" class="md:hidden text-brand focus:outline-none z-50 p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full top-20 left-0 shadow-lg px-6 py-4 hidden">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="work.html" class="block py-2">Work</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2 text-brand font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <div class="flex-grow pt-32 pb-20 px-4 md:px-6">
+        <div class="max-w-5xl mx-auto text-center fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-brand">Let's connect.</h1>
+            <p class="text-gray-600 max-w-xl mx-auto mb-16">
+                I am open to freelance work, internships, or full-time opportunities. Feel free to reach out via
+                WhatsApp or Email.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-8">
+
+                <a href="mailto:bagusrizqi367@gmail.com"
+                    class="lg:col-span-2 group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-accent hover:shadow-md transition duration-300 flex flex-col items-center justify-center text-center gap-4 fade-up delay-100">
+                    <div
+                        class="w-14 h-14 bg-blue-50 text-brand rounded-full flex items-center justify-center text-2xl group-hover:bg-brand group-hover:text-white transition duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Email</h3>
+                        <p class="text-sm md:text-base font-semibold break-all text-brand">bagusrizqi367@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/6283842367770" target="_blank"
+                    class="lg:col-span-2 group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-accent hover:shadow-md transition duration-300 flex flex-col items-center justify-center text-center gap-4 fade-up delay-100">
+                    <div
+                        class="w-14 h-14 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-2xl group-hover:bg-green-600 group-hover:text-white transition duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">WhatsApp</h3>
+                        <p class="text-sm md:text-base font-semibold text-brand">+62 838-4236-7770</p>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/mhmmd.rzqbgs" target="_blank"
+                    class="lg:col-span-2 group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-accent hover:shadow-md transition duration-300 flex flex-col items-center justify-center text-center gap-4 fade-up delay-100">
+                    <div
+                        class="w-14 h-14 bg-pink-50 text-[#E1306C] rounded-full flex items-center justify-center text-2xl group-hover:bg-[#E1306C] group-hover:text-white transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Instagram</h3>
+                        <p class="text-sm md:text-base font-semibold text-brand">@mhmmd.rzqbgs</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mhmmdrzqbgs" target="_blank"
+                    class="lg:col-span-3 group bg-brandDark p-8 rounded-2xl shadow-lg border border-brandDark hover:bg-brand transition duration-300 flex flex-col items-center justify-center text-center text-white fade-up delay-200">
+                    <i
+                        class="fab fa-github text-4xl mb-3 text-accent group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold mb-1">GitHub Profile</h3>
+                    <p class="text-blue-200 text-xs">See my code repositories.</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/muhamad-rizqi-bagus-trianto/" target="_blank"
+                    class="lg:col-span-3 group bg-[#0077B5] p-8 rounded-2xl shadow-lg border border-[#0077B5] hover:bg-[#006097] transition duration-300 flex flex-col items-center justify-center text-center text-white fade-up delay-200">
+                    <i
+                        class="fab fa-linkedin text-4xl mb-3 text-white group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold mb-1">LinkedIn</h3>
+                    <p class="text-blue-100 text-xs">Connect professionally.</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-brand text-white py-8 border-t border-white/10 text-center text-sm mt-auto">
+        <p>&copy; 2025 Muhammad Rizqi Bagus T.</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Muhammad Rizqi Bagus Trianto</title>
+    <meta name="description"
+        content="Selected projects: Stunting Prediction AI, TetraVolt ERP, Pangestu Academic Tool, and Chatbot.">
+    <meta name="author" content="Muhammad Rizqi Bagus Trianto">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#234C6A',
+                        brandDark: '#1a3a52',
+                        accent: '#9CC3D5',
+                        accentLight: '#BFE0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-brand antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-brand">M. RIZQI BAGUS T.</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <a href="work.html" class="text-brand font-bold border-b-2 border-accent pb-1">Work</a>
+                <a href="about.html" class="hover:text-brand transition">About</a>
+                <a href="contact.html" class="hover:text-brand transition">Contact</a>
+            </div>
+            <button id="mobile-btn" class="md:hidden text-brand focus:outline-none z-50 p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full top-20 left-0 shadow-lg px-6 py-4 hidden">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="work.html" class="block py-2 text-brand font-bold">Work</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-12 bg-brand text-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 text-center fade-in-up">
+            <p class="text-accent font-bold tracking-widest text-xs uppercase mb-2">01 — Selected Projects</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">My Works</h1>
+            <p class="text-blue-100 text-lg max-w-2xl mx-auto">Execution from design to website construction.</p>
+        </div>
+    </header>
+
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-24">
+
+            <div class="flex flex-col md:flex-row gap-10 items-center fade-in-up delay-200">
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-200 rounded-xl overflow-hidden shadow-xl border border-gray-200 group">
+                        <img src="p4.png" alt="Stunting AI"
+                            class="w-full h-auto transform group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-2">Stunting Prediction Model</h2>
+                    <p class="text-brand font-mono text-xs bg-accent/20 px-2 py-1 inline-block rounded mb-4">Python /
+                        Django / Machine Learning</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Built a classification system achieving <strong>86.1% Accuracy</strong>. Shows my ability to
+                        handle complex logic and Python data libraries.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse gap-10 items-center fade-in-up">
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-200 rounded-xl overflow-hidden shadow-xl border border-gray-200 group">
+                        <img src="p1.png" alt="TetraVolt ERP"
+                            class="w-full h-auto transform group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-2">TetraVolt Inventory</h2>
+                    <p class="text-brand font-mono text-xs bg-accent/20 px-2 py-1 inline-block rounded mb-4">PHP / MySQL
+                        / Tailwind</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A complete inventory management system. Demonstrates strong backend logic with PHP Native and
+                        efficient database structuring.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10 items-center fade-in-up">
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-200 rounded-xl overflow-hidden shadow-xl border border-gray-200 group">
+                        <img src="p2.png" alt="PANGESTU EdTech"
+                            class="w-full h-auto transform group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-2">PANGESTU Academic Tool</h2>
+                    <p class="text-brand font-mono text-xs bg-accent/20 px-2 py-1 inline-block rounded mb-4">Web App /
+                        Data Analysis / PHP</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Student evaluation platform for SD Negeri 1 Pedawang. Focused on user-friendly interfaces for
+                        teachers and accurate data reporting.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse gap-10 items-center fade-in-up">
+                <div class="w-full md:w-1/2">
+                    <div
+                        class="bg-brandDark rounded-xl overflow-hidden shadow-xl border border-gray-700 group p-4 flex justify-center">
+                        <img src="p3.png" alt="Chatbot"
+                            class="h-64 object-contain transform group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-2">Public Health Chatbot</h2>
+                    <p class="text-brand font-mono text-xs bg-accent/20 px-2 py-1 inline-block rounded mb-4">AI
+                        Integration / Mobile Web / PHP</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Created during KKN Community Service. An interactive tool providing instant health information
+                        to rural communities.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-brand text-white py-8 border-t border-white/10 text-center text-sm">
+        <p>&copy; 2025 Muhammad Rizqi Bagus T.</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
